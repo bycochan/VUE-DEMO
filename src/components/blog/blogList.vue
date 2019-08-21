@@ -26,7 +26,7 @@ export default {
                 {title:'如何将本地vue项目上传到github',url:'https://www.cnblogs.com/whitepine/articles/9282260.html'},
                 {title:'利用vue-cli配合vue-router搭建一个完整的spa流程（一）',url:'https://segmentfault.com/a/1190000009160934'},
                 {title:'使用vue开发的你是不是 真正需要Vuex',url:'https://blog.csdn.net/chjj0904/article/details/78753153'},               
-                {title:'使用vue开发的你是不是 真正需要Vuex',url:'https://blog.csdn.net/chjj0904/article/details/78753153'},
+                {title:'为什么你要写博客？',url:'https://zhuanlan.zhihu.com/p/19743861?columnSlug=cnfeat'},
             ],
             holeList:[                
                 {title:'vue单文件组件父子（子父）组件之间通信',url:'https://www.cnblogs.com/qqfontofweb/p/8649672.html'},

@@ -62,12 +62,23 @@
         :loading="false">
             查看图片<i class="el-icon-video-camera"> </i>
         </el-button>
+        <el-table
+            :data="imglist"
+            style="width: 100%">
+            <el-table-column
+                prop="time"
+                label="time">
+            </el-table-column>
+            <el-table-column
+                prop="img"
+                label="label" >
+            </el-table-column>
+        </el-table>
         <div class="imgBox">
             <div class="imglist" v-for="item in imglist" :key="item.index">
                 <el-image :src="item.img" fit = 'fill'></el-image>
             </div>
         </div>
-
     </div>
 </template>
 <script>
@@ -80,25 +91,18 @@ export default {
                {title:"丰富的配置项",cont:"支持拦截器等高级配置"},
                {title:"社区支持",cont:"axios相关的npm包数量一直在增长"}
            ],
-           imglist:[],
            apilist:[]
         }
+    },
+    computed: {
+         imglist(){
+             return this.$store.state.imglist    
+         }
     },
     methods: {
         getImages(){
                 this.loading="true";
-                this.axios.post('https://api.apiopen.top/getImages',{
-                    page:"",
-                    count:'50'
-                    })
-                    .then((res) => {
-                    
-                    this.imglist= this.imglist.concat( res.data.result);
-                    this.loading = false;
-                    
-                    console.log(this.imglist);
-                });
-            
+                this.$store.dispatch('getImg')
         }
     },
     mounted(){
