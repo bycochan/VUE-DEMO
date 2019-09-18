@@ -6,34 +6,6 @@
                 <el-menu-item v-for="(item,i) in list" :key="i"
                 :index="item.navPath">{{item.navName}}
                 </el-menu-item>   
-                    <!-- <el-submenu v-for="(item,i) in list" :key='i'  
-                    :index = "item.navPath" >
-                        <template slot="title">
-                            {{item.navName}}                           
-                        </template>
-                        <el-menu-item v-for="(vue,j) in item.vueChildren" 
-                        :key="j" :index="vue.navPath">{{vue.navName}}</el-menu-item>
-                    </el-submenu> -->
-                    <!-- <el-submenu index="1">                                   
-                    <template slot="title">
-                    <i class="el-icon-document"></i>
-                    <span>Vue</span>
-                    </template>
-                    <el-menu-item index="1-1">Vue</el-menu-item>
-                    <el-menu-item index="1-2">VUX</el-menu-item>
-                    <el-menu-item index="1-3">Vuex</el-menu-item>                            
-                    <el-menu-item index="1-4">Vue CLI</el-menu-item>
-                    <el-menu-item index="1-5">Vue Router</el-menu-item>
-                    
-                    </el-submenu>
-                    <el-menu-item index="2" >
-                        <i class="el-icon-document"></i>
-                        <span slot="title">Echarts</span>
-                    </el-menu-item>
-                    <el-menu-item index="3">
-                        <i class="el-icon-document"></i>
-                        <span slot="title">Element-UI</span>
-                    </el-menu-item> -->
                 </el-menu>    
     </div>
 </template>

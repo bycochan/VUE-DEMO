@@ -18,7 +18,7 @@
                 </el-button>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item command = "login">login</el-dropdown-item>
-                    <el-dropdown-item command = "logout">login</el-dropdown-item>
+                    <el-dropdown-item command = "logout">logout</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
         </div>
@@ -35,6 +35,11 @@ export default {
         handleCommand(command){
             if(command=="login"){
             this.$router.push({path:"/"});
+            }
+            if(command=='logout'){
+                this.$cookie.delete('name');
+                this.$router.push({path:"/"});
+
             }
         }
     }

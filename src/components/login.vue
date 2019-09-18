@@ -3,9 +3,9 @@
   <el-container>
     <el-header></el-header>
     <el-main>
-      <el-form ref="form" :model="form" label-width="80px" :rules="rules">
+      <el-form ref="form" :model="form"  :rules="rules">
         <el-row type="flex" justify="center">
-        <el-col :span="8">
+        <el-col :md="8" :xs="24">
           <el-form-item label="" prop="name">
             <el-input 
             size="large"
@@ -18,7 +18,7 @@
         </el-col>
       </el-row>
       <el-row type="flex" justify="center">
-        <el-col :span="8">
+        <el-col  :md="8"  :xs="24">
           <el-form-item label="" prop="pwd">
             <el-input 
             size="large"
@@ -32,13 +32,13 @@
       </el-row>
       <!-- <el-button type="primary" round>Sign in</el-button> -->
       <el-row  >
-        <el-col :span="4" :offset=9>
+        <el-col :md="4" :xs="24" :offset="8">
           <el-button 
           type="primary" 
           v-loading.fullscreen="loading"
           round @click="submitForm()"> Sign in </el-button>
         </el-col>
-        <el-col :span="4" >
+        <el-col :md="4" :xs="24">
           <el-button type="danger" round @click="resetForm()">Reset</el-button>
         </el-col>
       </el-row>
@@ -94,7 +94,12 @@ export default {
               
               }
               else{
-                alert('登陆失败');
+                this.resetForm();
+                this.$message.error({
+                  message:"登录失败，请输入正确的用户名和密码",
+                  showClose:true,
+                  center:true
+                })
                 this.loading = false;
               }
             
