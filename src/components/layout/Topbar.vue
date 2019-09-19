@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="imgbox">
+        <div class="logo">
             <el-image
             style="width: 60px; height:60px"
             :src="imgurl"
@@ -8,19 +8,22 @@
             ></el-image>
         </div>
         <div class="info">
-            <el-badge value="new" type="primary">
+            <el-badge value="new" type="danger" is-dot >
             <el-button size="small">消息</el-button>
             </el-badge>
         </div>
-        <div class="avatar">
-            <el-dropdown @command="handleCommand">
-                <el-button type="info" icon='el-icon-user-solid' circle >
-                </el-button>
+        <!-- <div class="user">
+            <el-avatar :src="userAvatar"></el-avatar>
+        </div> -->
+        <div class="dropdown">
+            <el-dropdown @command="handleCommand" >
+            <el-avatar :src="userAvatar"></el-avatar>
                 <el-dropdown-menu slot="dropdown">
                     <el-dropdown-item command = "login">login</el-dropdown-item>
                     <el-dropdown-item command = "logout">logout</el-dropdown-item>
                 </el-dropdown-menu>
             </el-dropdown>
+    
         </div>
     </div>
 </template>
@@ -28,7 +31,8 @@
 export default {
     data () {
         return {
-            imgurl:'https://cn.vuejs.org/images/logo.png'
+            imgurl:'https://cn.vuejs.org/images/logo.png',
+            userAvatar:"http://wx1.sinaimg.cn/wap720/006dIQw0ly1fd3ome8qlkj30vm0hsaeh.jpg"
         }
     },
     methods: {
@@ -45,17 +49,21 @@ export default {
     }
 }
 </script><style scoped>
-.imgbox{
+.logo{
     float: left;
+    margin-left: 20px;
 }
 .info{
     position: absolute;
-    top: 15px;
-    right: 120px;
+    top: 14px;
+    right: 100px;
 }
-.avatar{
+.dropdown{
     position: absolute;
     top: 10px;
     right: 30px;
+}
+.el-icon-switch-button{
+    font-size: 24px
 }
 </style>

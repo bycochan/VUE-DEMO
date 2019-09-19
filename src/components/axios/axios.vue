@@ -106,16 +106,6 @@ export default {
         }
     },
     mounted(){
-        // let api = 'https://api.apiopen.top'
-        // this.axios.get(api+'/getAllUrl').then((res) => {
-        // this.apilist = res.data
-        // // console.log(res.data)
-        // console.log(this.apilist)
-        // });
-        // this.axios.get(api+'/videoDetails').then((res)=>{
-        // console.log(res.data.result)
-        // })
-
     }
 }
 </script>

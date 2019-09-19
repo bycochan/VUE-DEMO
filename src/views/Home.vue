@@ -34,38 +34,29 @@ export default {
   }
 }
 </script>
-<style scoped>
-/* .header{
-    background-color:#67C23A;
-} */
+<style lang="scss" scoped>
 .home{
-  position: fixed;
-  top: 0;
-}
+    width: 100%;
+    height: auto;
+      .head{
+          width: auto;
+          height: 20px;
+          border-bottom:2px solid #dcdfe6;
+          background-color:#ffffff;
+      }
+      .aside{
+          overflow-y: auto;
+          text-align: justify;
+          // padding-left: 20px;
+          width: 20% !important;
+      }
+      .main{
+          background-color: #fff;
+          width: 70%;
+          max-height: 570px;
+      }
 
-.head{
-  width: 1366px;
-  height: 20px;
-  border-bottom:2px solid #dcdfe6;
-  background-color:#ffffff;
 }
-.aside{
-  display: block;
-  overflow-y: auto;
-  height: 560px;
-  text-align: left;
-  padding-left: 20px;
-}
-.main{
-  display: block;
-  background-color: #fff;
-  height: 570px;
-  overflow-y: scroll;
-  width: 600px;
-}
-/* .footer{
-    background-color: #E6A23C;
-} */ 
 ::-webkit-scrollbar{
   width: 5px;
 } 
@@ -73,24 +64,6 @@ export default {
   display: none;
 }
 </style>
-<style>
-#app /deep/ .el-alert__title{
-  font-size:18px;
-}
-#app /deep/ .el-alert__description{
-  font-size:14px;
-}
-#app /deep/ .el-link{
-  font-size: 1.2rem;
-}
-#app /deep/ .el-collapse-item__header{
-  font-size: 1.1rem;
-  background-color: #F2F6FC;
-}
-#app /deep/ .el-collapse-item__content{
-  font-size: 16px;
-  text-align: left;
-}
-</style>
+
 
 

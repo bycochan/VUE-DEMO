@@ -8,7 +8,48 @@ export default new Vuex.Store({
   state: {
     count:1111,
     isLogin:0,
-    imglist:[]
+    imglist:[],
+    menuList:[
+              {
+                navPath:'/vuejs',navName:'VueJs'
+            },
+            {
+                navPath:'/vux',navName:'VUX'
+            },
+            {
+                navPath:'/vuex',navName:'Vuex'
+            },
+            {
+                navPath:'/vuecli',navName:'Vue Cli'
+            },
+            {
+                navPath:'/vuerouter',navName:'Vue Router'
+            },
+            {
+                navPath:'/elementui',navName:'Element-UI'
+            },
+            {
+                navPath:'/echart',navName:'ECharts'
+            },
+            {
+                navPath:'/node',navName:'Node'
+            },
+            {
+                navPath:'/axios',navName:'Axios'
+            },
+            {
+                navPath:'/blogList',navName:'blogList'
+            },
+            // {
+            //     navPath:'/echart',navName:'echart'
+            // },
+            // {
+            //     navPath:'/echart',navName:'echart'
+            // },
+            // {
+            //     navPath:'/echart',navName:'echart'
+            // },
+            ]
 
   },
   getters: {

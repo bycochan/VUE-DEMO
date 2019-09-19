@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div> -->
     <router-view/>
   </div>
 </template>
@@ -16,15 +12,24 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+body{
+  overflow: hidden;
 }
-
+#app /deep/ .el-alert__title{
+  font-size:18px;
+}
+#app /deep/ .el-alert__description{
+  font-size:14px;
+}
+#app /deep/ .el-link{
+  font-size: 1.2rem;
+}
+#app /deep/ .el-collapse-item__header{
+  font-size: 1.1rem;
+  background-color: #F2F6FC;
+}
+#app /deep/ .el-collapse-item__content{
+  font-size: 1.2rem;
+  text-align: left;
+}
 </style>
