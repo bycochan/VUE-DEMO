@@ -14,7 +14,9 @@ import echart from '@/components/echart/echart.vue';
 import node from '@/components/node/node.vue';
 import axios from '@/components/axios/axios.vue';
 import blogList from '@/components/blog/blogList.vue';
-import daping from "@/views/daping.vue";
+import daping from "@/components/echart/daping.vue";
+import imgbox from "@/components/imgbox/imgbox.vue";
+
 // import blogList from '/src/components/blog/blogList';
 // Module not found: Error: Can't resolve '/src/components/blog/blogList'
 Vue.use(Router);
@@ -82,16 +84,12 @@ export default new Router({
           meta: { title:"Axios" },
           component: axios 
         },
-        // { 
-        //   path:'/techPost',
-        //   meta: { title:"技术贴" },
-        //   component: techPost 
-        // },
         { 
           path:'/blogList',
           meta: { title:"blogList" },
           component: blogList 
-        }
+        },
+        { path: '/imgbox', component: imgbox }
       ]
     },
     {
@@ -100,7 +98,8 @@ export default new Router({
     },
     { 
       path: '/daping', 
-      component: daping }
+      component: daping 
+    }
 
   ]
 });

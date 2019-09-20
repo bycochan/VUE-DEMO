@@ -15,6 +15,14 @@
 body{
   overflow: hidden;
 }
+html{
+  box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: #409EFF;
+}
+
 #app /deep/ .el-alert__title{
   font-size:18px;
 }
@@ -32,4 +40,16 @@ body{
   font-size: 1.2rem;
   text-align: left;
 }
+::-webkit-scrollbar{
+  width: 8px;
+} 
+::-webkit-scrollbar-thumb {
+        height: 10px;
+        border-radius: 20px;
+        background: #909399;
+    }
+::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: #ccc;
+    }
 </style>

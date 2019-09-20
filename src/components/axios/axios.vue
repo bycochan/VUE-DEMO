@@ -62,18 +62,24 @@
         :loading="false">
             查看图片<i class="el-icon-video-camera"> </i>
         </el-button>
-        <el-table
-            :data="imglist"
-            style="width: 100%">
-            <el-table-column
-                prop="time"
-                label="time">
-            </el-table-column>
-            <el-table-column
-                prop="img"
-                label="label" >
-            </el-table-column>
-        </el-table>
+        <el-collapse >
+            <el-collapse-item title="imageTable" name="imageTable">
+                <div>
+                <el-table
+                    :data="imglist"
+                    style="width: 100%">
+                    <el-table-column
+                        prop="time"
+                        label="time">
+                    </el-table-column>
+                    <el-table-column
+                        prop="img"
+                        label="label" >
+                    </el-table-column>
+                </el-table>
+                </div>
+            </el-collapse-item>
+        </el-collapse>
         <div class="imgBox">
             <div class="imglist" v-for="item in imglist" :key="item.index">
                 <el-image :src="item.img" fit = 'fill'></el-image>
@@ -96,13 +102,13 @@ export default {
     },
     computed: {
          imglist(){
-             return this.$store.state.imglist    
+             return this.$store.state.imgModule.imglist    
          }
     },
     methods: {
         getImages(){
                 this.loading="true";
-                this.$store.dispatch('getImg')
+                this.$store.dispatch('imgModule/getImg')
         }
     },
     mounted(){

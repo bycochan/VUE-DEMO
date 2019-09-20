@@ -47,21 +47,16 @@ export default {
       .aside{
           overflow-y: auto;
           text-align: justify;
+          max-height: 550px;
           // padding-left: 20px;
           width: 20% !important;
       }
       .main{
           background-color: #fff;
-          width: 70%;
+          width: 75%;
           max-height: 570px;
       }
 
-}
-::-webkit-scrollbar{
-  width: 5px;
-} 
- ::-webkit-scrollbar-button{
-  display: none;
 }
 </style>
 

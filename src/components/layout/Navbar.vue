@@ -16,7 +16,7 @@ export default {
     },
     computed: {
      list(){
-         return this.$store.state.menuList
+         return this.$store.state.menuModule.menuList
      }   
     }
 }

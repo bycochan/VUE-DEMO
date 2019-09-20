@@ -29,32 +29,26 @@ export default {
     },
 }
 </script>
-<style scoped>
+<style scoped lang='scss'>
 .bg {
     position: fixed;
     width: 100%;
+        img{
+            position: relative;
+            bottom: -50px;
+            z-index: -10;
+            background-repeat:no-repeat;
+            background-size: 100% 100%; 
+        }
+        .alert{
+            height: 60px;   
+        }
+        .img404{
+            position: absolute;
+            left: 38%;
+            top: 60px;
+        }
 }
-.bg img{
-    position: relative;
-    z-index: -10;
-   background-repeat:no-repeat;
-   background-size: 100% 100%; 
-}
-.alert{
-    height: 60px;   
-}
-.img404{
-    position: relative;
-    float: left;
-    left: 80px;
-    top: 150px;
-}
-a{
-    text-decoration: none;
-    color: #409EFF;
-}
-.router-link-active{
-    text-decoration: none;
-}
+
 </style>
 
