@@ -23,6 +23,17 @@
                 </li>
             </el-card>
             </el-tab-pane>
+            <el-tab-pane label="数据资产" name="mocs" class="content_box">  
+            <el-card v-for="item in mocsList" :key="item.index" class="titleList"> 
+                <li>
+                    <el-link 
+                    :href="item.url" 
+                    :underline = false
+                    target="_blank">{{item.title}}
+                    </el-link> 
+                </li>
+            </el-card>
+            </el-tab-pane>
         </el-tabs>
     </div>
 </template>
@@ -39,6 +50,9 @@ export default {
         },
         holeList(){
             return this.$store.state.blogModule.holeList
+        },
+        mocsList(){
+            return this.$store.state.blogModule.mocsList
         }
     },
     methods:{

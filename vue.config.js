@@ -3,7 +3,7 @@ module.exports = {
   outputDir: 'dist',
   assetsDir: 'static',
   devServer:{
-      host:'10.74.158.27',
+      host:'localhost',
       port:1996,
       open:true,
       // proxy:{

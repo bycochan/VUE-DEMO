@@ -14,6 +14,7 @@ Vue.use(ElementUI);
 
 Vue.config.productionTip = false;
 
+import 'echarts-wordcloud';
 import echarts from 'echarts';
 Vue.prototype.$echarts = echarts ;
 
