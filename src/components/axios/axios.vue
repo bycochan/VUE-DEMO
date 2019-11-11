@@ -102,13 +102,13 @@ export default {
     },
     computed: {
          imglist(){
-             return this.$store.state.imgModule.imglist    
+             return this.$store.state.image.imglist    
          }
     },
     methods: {
         getImages(){
                 this.loading="true";
-                this.$store.dispatch('imgModule/getImg')
+                this.$store.dispatch('image/getImg')
         }
     },
     mounted(){

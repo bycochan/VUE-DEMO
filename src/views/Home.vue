@@ -29,8 +29,16 @@ import Navbar from '@/components/layout/Navbar.vue'
 import Topbar from '@/components/layout/Topbar.vue'
 export default {
   // 声明组件
+  name: 'home',
   components:{
-    Navbar,Topbar
+    Navbar,
+    Topbar
+  },
+  mounted () {
+    if (this.$store.state.isLogin === 0) {
+      this.$cookie.delete('name');
+      this.$router.push({path:"/"});
+    }
   }
 }
 </script>

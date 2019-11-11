@@ -46,13 +46,13 @@ export default {
     },
     computed: {
         techList(){
-            return this.$store.state.blogModule.techList
+            return this.$store.state.blog.techList
         },
         holeList(){
-            return this.$store.state.blogModule.holeList
+            return this.$store.state.blog.holeList
         },
         mocsList(){
-            return this.$store.state.blogModule.mocsList
+            return this.$store.state.blog.mocsList
         }
     },
     methods:{

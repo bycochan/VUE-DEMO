@@ -83,6 +83,7 @@ export default {
                 this.$cookie.set('name','byco')
                   setTimeout(() => {
                     this.$router.push({path:"/home"});
+                    this.$store.commit('isLogin', 1)
                     this.loading = false;
                   }, 500);
               
